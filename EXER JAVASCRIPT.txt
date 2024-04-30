@@ -1,0 +1,294 @@
+//Numero 1
+DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual é o maior número?</title>
+</head>
+<body>
+</body>
+<script>
+    let number1 = prompt("Digite um número:")
+    let number2 = prompt("Digite mais um número:")
+    
+    if (number1 > number2){
+        alert("O número " +  number1 + " é maior");
+    }
+    else if(number2 > number1){
+        alert("O número " +  number2 + " é maior");
+    }
+    else{
+        alert("O número digitados são iguais");
+    }
+    </script>
+</html>
+
+//Numero 3
+v<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliador de Nota</title>
+</head>
+<body>
+</body>
+<script>
+    let nota = prompt("Digite sua nota:")
+
+    if(nota < 6){
+        alert("Reprovado");
+    }
+    else if(nota => 6){
+        alert("Aprovado");
+    }
+    else{
+        alert("Aprovado com Louvor");
+    }
+    </script>
+</html>
+
+
+//Numero 4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de Números de um Vetor</title>
+</head>
+<body>
+</body>
+<script>
+    const number = [74, 89, 2, 13, 55];
+
+    let soma = 0;
+    for (let i = 0; i < number.length; i++) {
+        soma += number[i];
+    }
+    const media = soma / number.length;
+
+    alert("A média dos números é: " + media);
+</script>
+</html>
+
+
+//Numero 5
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis</title>
+</head>
+<body>
+</body>
+<script>
+    let variavel = prompt("Digite uma letra:")
+
+    if(variavel == "a" || variavel == "A"){
+        alert("A")
+    }
+    else if(variavel == "b" || variavel == "B"){
+        alert("B")
+    }
+    else{
+        alert("Outra letra")
+    }
+</script>
+</html>
+
+
+//Numero 6
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma dos Elementos da Matriz</title>
+</head>
+<body>
+</body>
+<script>
+    let matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+    ];
+
+    let soma = 0;
+    for (let i = 0; i < matriz.length; i++) {
+        for (let j = 0; j < matriz[i].length; j++) {
+            soma += matriz[i][j];
+        }
+    }
+
+    alert("A soma dos elementos da matriz é: " + soma);
+
+</script>
+</html>
+
+
+//Numero 7
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorial de Número</title>
+</head>
+<body>
+    <form id="Fatorial">
+        <label for="fator">Digite um número: </label>
+        <input type="number" id="fator" required>
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+<script>
+    const fatorial = document.getElementById('Fatorial');
+
+    fatorial.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const fator1 = document.getElementById('fator').value;
+
+    const fatorar = calcularFatorial(fator1);
+    alert('O número fatorado é: ' + fatorar)
+    });
+
+    function calcularFatorial(numero) {
+        if (numero === 0 || numero === 1) {
+            return 1;
+        } else {
+            let resultado = 1;
+            for (let i = 2; i <= numero; i++) {
+                resultado *= i;
+            }
+            return resultado;
+        }
+}
+
+</script>
+</html>
+
+
+//Numero 8
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opções</title>
+</head>
+<body>
+    <form id="opcoes1">
+        <button type="button" onclick="escolherOpcao(1)">Opção 1</button>
+    </form>
+
+    <form id="opcoes2">
+        <button type="button" onclick="escolherOpcao(2)">Opção 2</button>
+    </form>
+
+    <form id="opcoes3">
+        <button type="button" onclick="escolherOpcao(3)">Opção 3</button>
+    </form>
+
+    <form id="opcao_inval">
+        <button type="button" onclick="escolherOpcao(0)">Outra Opção</button>
+    </form>
+    
+</body>
+<script>
+    function escolherOpcao(opcao) {
+        switch (opcao) {
+            case 1:
+                alert("Opção 1 escolhida");
+                break;
+            case 2:
+                alert("Opção 2 escolhida");
+                break;
+            case 3:
+                alert("Opção 3 escolhida");
+                break;
+            default:
+                alert("Opção inválida");
+                break;
+        }
+    }
+</script>
+</html>
+
+
+//Numero 9
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior número de um vetor</title>
+</head>
+<body>
+</body>
+<script>
+    let vetor = [90, 64, 37, 21, 55]
+    let maiornum = vetor[0];
+
+    for (let i = 1; vetor[i]; i++){
+        if (vetor[i] > maiornum){
+            maiornum = vetor[i];
+        }
+    }
+    alert("O maior número do vetor é " + maiornum);
+</script>
+</html>
+
+
+//Numero 10
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média dos elementos da Matriz</title>
+</head>
+<body>
+    <form id="Matrix">
+        <label>Calcular Média da Matriz: </label>
+        <p>[0, 5, 10]</p>
+        <p>[15, 20, 25]</p>
+        <p>[30, 35, 40]</p>
+    
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+<script>
+    const matrix1 = document.getElementById('Matrix');
+
+    matrix1.addEventListener('submit', function(event) {
+        event.preventDefault();
+            const matrix = [
+            [0, 5, 10],
+            [15, 20, 25],
+            [30, 35, 40]
+        ];
+
+        function mediaMatrix(matriz) {
+            let soma = 0;
+            let contador = 0;
+
+
+            for (let i = 0; i < matriz.length; i++) {
+                for (let j = 0; j < matriz[i].length; j++) {
+                    soma += matriz[i][j];
+                    contador++;
+                }
+            }
+            const media = soma / contador;
+            return media;
+        }
+        const resul = mediaMatrix(matrix);
+        alert('A média da matriz é: ' + resul);
+    });
+</script>
+</html>
